@@ -1,0 +1,202 @@
+/* =========================
+   CreditSmart - Estilos base
+   ========================= */
+
+/* Variables del tema */
+:root{
+  --brand: #2b7a78;
+  --brand-dark: #245e5d;
+  --muted: #6b6b6b;
+  --bg: #f7f7f8;
+  --white: #ffffff;
+  --shadow: 0 6px 20px rgba(0,0,0,0.06);
+  --container: 1100px;
+  --gap: 16px;
+  --radius: 10px;
+  --success: #1f8a36;
+  --danger: #c0392b;
+  --glass: rgba(255,255,255,0.6);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Reset básico */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+  font-size:16px;
+}
+
+/* Contenedor principal */
+.container{
+  max-width:var(--container);
+  margin:20px auto;
+  padding:20px;
+  background:var(--white);
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+/* Header / Nav */
+.site-header {
+  background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
+  border-bottom:1px solid #eee;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 0;
+}
+.brand{
+  margin:0;
+  color:var(--brand);
+  font-weight:700;
+  font-size:1.4rem;
+}
+.main-nav{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.main-nav a{
+  padding:8px 10px;
+  border-radius:8px;
+  text-decoration:none;
+  color:inherit;
+  transition:all .15s ease;
+  border:1px solid transparent;
+}
+.main-nav a:hover{
+  background:var(--glass);
+  transform:translateY(-1px);
+}
+.main-nav a.active{
+  background:var(--brand);
+  color:#fff;
+  font-weight:600;
+  border-color:var(--brand-dark);
+}
+
+/* Hero */
+.hero{
+  margin-bottom:16px;
+}
+.hero h2{ margin:0 0 6px 0; font-size:1.25rem; color:var(--brand-dark) }
+.hero p{ margin:0; color:var(--muted) }
+
+/* GRID de tarjetas: responsive */
+.cards-grid{
+  display:grid;
+  gap:var(--gap);
+  grid-template-columns: repeat(3, 1fr); /* desktop por defecto */
+  margin-top:12px;
+}
+
+/* CARD */
+.card{
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.04);
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  flex-direction:column;
+}
+.card-media{ width:100%; display:flex; align-items:center; justify-content:center; padding:6px 0 }
+.card-body{ width:100%; flex:1; }
+.product-name{ margin:0 0 6px 0; font-size:1.05rem; color:#222; }
+.rate, .amount, .term{ margin:4px 0; color:var(--muted); font-size:0.95rem; }
+.card-actions{ display:flex; gap:8px; justify-content:flex-end; width:100%; margin-top:8px; }
+
+/* BOTONES */
+.btn{
+  background:var(--brand);
+  color:#fff;
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+  font-size:0.95rem;
+}
+.btn.ghost{
+  background:transparent;
+  color:var(--brand-dark);
+  border:1px solid rgba(0,0,0,0.06);
+}
+
+/* CONTROLES SIMULADOR / FORM */
+.sim-controls, .form-grid{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin:12px 0;
+}
+.input, .select, input[type="search"], textarea {
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid #e6e6e6;
+  font-size:0.95rem;
+  min-height:40px;
+}
+.form-grid{
+  flex-direction:column;
+}
+.fieldset-inline{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* SUMMARY / mensajes */
+.summary{
+  background:#f3f6f5;
+  padding:12px;
+  border-radius:8px;
+  margin-top:10px;
+}
+.error{ color:var(--danger); font-size:0.9rem; margin-top:6px }
+.success{ color:var(--success); font-size:0.95rem; margin-top:6px }
+.empty{ color:var(--muted); padding:12px; border-radius:6px; background:linear-gradient(#fff, #fafafa) }
+
+/* Submissions list */
+.submissions{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+.submissions li{ background:#fff; border-radius:8px; padding:10px; border:1px solid #f0f0f0; }
+
+/* FOOTER */
+.site-footer{ margin-top:18px; border-top:1px solid #eee; padding-top:12px; text-align:center; color:var(--muted) }
+
+/* --------------------------------------
+   Responsive adjustments (mobile first)
+   -------------------------------------- */
+@media (max-width: 900px) {
+  .cards-grid{ grid-template-columns: repeat(2, 1fr); }
+  .header-inner{ padding:10px 0; }
+  .brand{ font-size:1.25rem; }
+}
+
+@media (max-width: 600px) {
+  .cards-grid{ grid-template-columns: 1fr; }
+  .container{ margin:10px; padding:16px; }
+  .main-nav{ gap:6px; }
+  .product-name{ font-size:1rem; }
+  .card{ padding:10px; }
+  .sim-controls{ flex-direction:column; align-items:stretch; }
+  .card-actions { justify-content:space-between; flex-wrap:wrap; }
+}
+
+/* Small polish for form responsiveness */
+@media (max-width: 420px) {
+  .input, .select { font-size:0.95rem; padding:8px; }
+  .btn { padding:8px 10px; font-size:0.95rem; }
+}
