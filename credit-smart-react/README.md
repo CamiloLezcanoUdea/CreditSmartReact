@@ -1,16 +1,98 @@
-# React + Vite
+<h1 align="center">💳 CreditSmart – Aplicación de Créditos en React</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-6.0-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/React_Router-7.0-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Descripción del Proyecto
 
-## React Compiler
+**CreditSmart** es una aplicación web creada con **React + Vite**, que permite:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Ver un catálogo dinámico de productos de crédito.  
+- Buscar y filtrar créditos en tiempo real (Simulador).  
+- Llenar un formulario interactivo con validaciones.  
+- Calcular automáticamente la **cuota mensual** según monto, tasa y plazo.  
+- Navegar entre páginas mediante **React Router**.  
+- Mantener un diseño limpio, responsive y profesional.
 
-## Expanding the ESLint configuration
+Este proyecto corresponde a la **Actividad 2 – Diseño de Interfaces Web**, migrando desde una versión estática hacia una SPA totalmente interactiva.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧑‍🎓 Autor
+
+**Camilo Restrepo**  
+Proyecto entregado para la materia *Diseño de Interfaces Web*.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+| Tecnología | Descripción |
+|-----------|-------------|
+| ⚛️ **React** | UI declarativa basada en componentes |
+| ⚡ **Vite** | Bundler rápido para desarrollo |
+| 🧭 **React Router DOM** | Navegación SPA |
+| 🎨 **CSS Moderno** | Variables, Flexbox, Grid, Responsividad |
+| 🔧 **JavaScript ES6+** | Lógica del simulador y validaciones |
+
+---
+
+## 📁 Arquitectura del Proyecto
+src/
+├── components/
+│ ├── Header.jsx
+│ ├── CreditCard.jsx
+│ ├── CreditGrid.jsx
+│ └── SummaryBox.jsx
+├── pages/
+│ ├── Home.jsx
+│ ├── Simulador.jsx
+│ └── Solicitar.jsx
+├── data/
+│ └── creditos.js
+├── styles.css
+├── App.jsx
+└── main.jsx
+
+## 🚀 Instalación y Ejecución
+
+### 1️⃣ Clonar el repositorio
+```bash
+git clone https://github.com/CamiloLezcanoUdea/CreditSmartReact.git
+
+## 2️⃣ Instalar dependencias
+
+- npm install
+- npm run dev
+- npm run build
+
+## 🧪 Funcionalidades Principales
+## 🔎 Catálogo de Créditos
+
+- Cargado desde un archivo de datos.
+- Render dinámico con componentes reutilizables.
+
+## 🧮 Simulador
+
+- Búsqueda en tiempo real.
+- Filtrado por rangos de monto.
+- Uso de useMemo para optimizar búsquedas.
+
+## 📝 Formulario Dinámico
+
+- Campos validados en tiempo real.
+- Cálculo de cuota mensual.
+- Resumen automático de solicitud.
+
+## 🔐 Validaciones del Formulario
+
+✔ Monto mínimo / máximo según tipo de crédito
+✔ Plazo máximo permitido
+✔ Cálculo con fórmula de amortización
+✔ Mensajes claros para cada error

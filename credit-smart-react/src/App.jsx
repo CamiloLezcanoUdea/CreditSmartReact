@@ -11,7 +11,16 @@ import Solicitar from "./pages/Solicitar";
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
+       <header className="site-header">
+        <div className="container header-inner">
+          <h1 className="brand">CreditSmart</h1>
+          <nav className="main-nav">
+            <Link to="/">Inicio</Link>
+            <Link to="/simulador">Simulador</Link>
+            <Link to="/solicitar">Solicitar Crédito</Link>
+          </nav>
+        </div>
+      </header>
 
       <Routes>
         <Route path="/" element={<Home />} />

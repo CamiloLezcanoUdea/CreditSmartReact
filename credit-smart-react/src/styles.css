@@ -159,15 +159,22 @@ body{
 }
 
 /* SUMMARY / mensajes */
-.summary{
-  background:#f3f6f5;
-  padding:12px;
-  border-radius:8px;
-  margin-top:10px;
+.summary {
+  background: #f4f8f7;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
 }
 .error{ color:var(--danger); font-size:0.9rem; margin-top:6px }
 .success{ color:var(--success); font-size:0.95rem; margin-top:6px }
 .empty{ color:var(--muted); padding:12px; border-radius:6px; background:linear-gradient(#fff, #fafafa) }
+
+.summary h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--brand-dark);
+}
 
 /* Submissions list */
 .submissions{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }

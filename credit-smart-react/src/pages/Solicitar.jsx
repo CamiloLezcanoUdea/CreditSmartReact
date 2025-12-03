@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CREDITOS } from "../data/creditos";
+import SummaryBox from "../components/SummaryBox";
 
 export default function Solicitar() {
   const params = new URLSearchParams(location.search);
@@ -82,14 +83,12 @@ export default function Solicitar() {
           {errors.plazo && <p className="error">{errors.plazo}</p>}
         </fieldset>
 
-        <section className="summary">
-          <h3>Resumen</h3>
-          <p><strong>Producto:</strong> {credito.nombre}</p>
-          <p><strong>Tasa:</strong> {credito.tasa}%</p>
-          <p><strong>Monto:</strong> ${fmt(form.monto)}</p>
-          <p><strong>Plazo:</strong> {form.plazo} meses</p>
-          <p><strong>Cuota estimada:</strong> ${fmt(cuota.toFixed(0))}/mes</p>
-        </section>
+        <SummaryBox
+        credito={credito}
+        monto={form.monto}
+        plazo={form.plazo}
+        cuota={cuota.toFixed(0)}
+        />
 
         <button className="btn">Enviar Solicitud</button>
       </form>
