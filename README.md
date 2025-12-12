@@ -69,36 +69,35 @@ src/firebase/config.js
 src/firebase/firestoreService.js
 src/pages/Solicitudes.jsx
 
-yaml
-Copiar código
-
 ---
 
 ## 📁 Arquitectura del Proyecto
 
 src/
 ├── components/
-│ ├── Header.jsx
-│ ├── CreditCard.jsx
-│ ├── CreditGrid.jsx
-│ ├── SummaryBox.jsx
-│ └── EnviarSolicitud.jsx
+│   ├── Header.jsx
+│   ├── CreditCard.jsx
+│   ├── CreditGrid.jsx
+│   ├── SummaryBox.jsx
+│   └── EnviarSolicitud.jsx
+│
 ├── pages/
-│ ├── Home.jsx
-│ ├── Simulador.jsx
-│ ├── Solicitar.jsx
-│ └── Solicitudes.jsx
+│   ├── Home.jsx
+│   ├── Simulador.jsx
+│   ├── Solicitar.jsx
+│   └── Solicitudes.jsx
+│
 ├── firebase/
-│ ├── config.js
-│ └── firestoreService.js
+│   ├── config.js
+│   └── firestoreService.js
+│
 ├── data/
-│ └── creditos.js
+│   └── creditos.js
+│
 ├── styles.css
 ├── App.jsx
 └── main.jsx
 
-markdown
-Copiar código
 
 ---
 
@@ -134,21 +133,15 @@ Copiar código
 ```bash
 git clone https://github.com/CamiloLezcanoUdea/CreditSmartReact.git
 2️⃣ Instalar dependencias
-bash
-Copiar código
 npm install
 3️⃣ Crear archivo .env
-ini
-Copiar código
 VITE_FIREBASE_API_KEY=
 VITE_FIREBASE_AUTH_DOMAIN=
 VITE_FIREBASE_PROJECT_ID=
 VITE_FIREBASE_STORAGE_BUCKET=
 VITE_FIREBASE_MESSAGING_SENDER_ID=
 VITE_FIREBASE_APP_ID=
-(Usar los valores del proyecto Firebase — NO subir a GitHub)
+
 
 4️⃣ Ejecutar el servidor
-bash
-Copiar código
 npm run dev
