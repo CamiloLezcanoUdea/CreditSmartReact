@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Simulador from "./pages/Simulador";
 import Solicitar from "./pages/Solicitar";
+import Solicitudes from "./pages/Solicitudes";
 
 export default function App() {
   return (
@@ -19,6 +20,9 @@ export default function App() {
 
         {/* Solicitar crédito */}
         <Route path="/solicitar" element={<Solicitar />} />
+
+        {/* solicitudes */}
+        <Route path="/solicitudes" element={<Solicitudes />} />
       </Routes>
     </BrowserRouter>
   );

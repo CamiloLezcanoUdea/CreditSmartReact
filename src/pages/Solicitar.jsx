@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CREDITOS } from "../data/creditos";
 import SummaryBox from "../components/SummaryBox";
+import SendRequest from "../components/SendRequest";
 
 export default function Solicitar() {
   const params = new URLSearchParams(location.search);
@@ -90,7 +91,7 @@ export default function Solicitar() {
         cuota={cuota.toFixed(0)}
         />
 
-        <button className="btn">Enviar Solicitud</button>
+        <SendRequest form={form} cuota={cuota.toFixed(0)} />
       </form>
     </main>
   );

@@ -32,6 +32,13 @@ export default function Header() {
           >
             Solicitar Crédito
           </NavLink>
+
+          <NavLink
+            to="/solicitudes"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Solicitudes
+          </NavLink>
         </nav>
       </div>
     </header>
